@@ -1,0 +1,92 @@
+------------------------------------------------------------------------
+r157 | mitch0 | 2008-10-16 12:16:28 +0000 (Thu, 16 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/RangeDisplay.toc
+
+no-lib-strip
+------------------------------------------------------------------------
+r156 | mitch0 | 2008-10-16 07:51:23 +0000 (Thu, 16 Oct 2008) | 1 line
+Changed paths:
+   A /trunk/Options.lua (from /branches/multi-frame/Options.lua:155)
+   M /trunk/RangeDisplay.lua
+   M /trunk/RangeDisplay.toc
+   M /trunk/localizations/localization-ruRU.lua
+
+merged in multi-frame branch
+------------------------------------------------------------------------
+r154 | sayclub | 2008-10-16 03:44:02 +0000 (Thu, 16 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/localizations/localization-koKR.lua
+
+Update locale koKR
+------------------------------------------------------------------------
+r150 | mitch0 | 2008-10-15 10:33:12 +0000 (Wed, 15 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/README.txt
+   M /trunk/RangeDisplay.lua
+   M /trunk/RangeDisplay.toc
+   M /trunk/localizations/localization-enUS.lua
+
+merged in colors branch, converted TOC to utf-8, version bump
+------------------------------------------------------------------------
+r143 | swix | 2008-10-14 06:01:15 +0000 (Tue, 14 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/RangeDisplay.toc
+   A /trunk/localizations/localization-ruRU.lua
+   M /trunk/localizations/localizations.xml
+
+Added ruRU localization
+------------------------------------------------------------------------
+r142 | mitch0 | 2008-10-07 08:25:49 +0000 (Tue, 07 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/embeds.xml
+
+fixed the tag closing / that got eaten by the previous replace...
+------------------------------------------------------------------------
+r141 | mitch0 | 2008-10-07 08:01:20 +0000 (Tue, 07 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/embeds.xml
+
+fixed paths in embeds.xml
+------------------------------------------------------------------------
+r140 | mitch0 | 2008-10-07 07:48:05 +0000 (Tue, 07 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/RangeDisplay.lua
+
+Updatedet some comments pointing to SVN and website
+------------------------------------------------------------------------
+r139 | mitch0 | 2008-10-02 08:06:59 +0000 (Thu, 02 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+follow our libs (undashing of repos)
+------------------------------------------------------------------------
+r138 | root | 2008-09-30 15:01:53 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r137 | mitch0 | 2008-09-30 14:29:40 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk
+   M /trunk/.pkgmeta
+   M /trunk/embeds.xml
+   D /trunk/libs
+
+First stab at fixing stuff after the move, drycode, experimental, probably broken
+------------------------------------------------------------------------
+r136 | root | 2008-09-29 21:56:10 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   M /trunk
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r134 | root | 2008-09-29 20:58:34 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/RangeDisplay
+   A /trunk (from /tmp/trunk/RangeDisplay:133)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------

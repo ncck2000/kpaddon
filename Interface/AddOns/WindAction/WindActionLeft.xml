@@ -1,0 +1,13 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<Script file="WindActionLeft.lua"/>
+	<Frame name="WindActionLeft" frameStrata="MEDIUM" toplevel="true" enableMouse="false" parent="UIParent" hidden="true">
+		<Scripts>
+			<OnLoad>WindActionLeft_OnLoad(self);</OnLoad>
+			<OnShow>WindActionLeft_OnShow(self);</OnShow>
+			<OnHide>WindActionLeft_OnHide(self);</OnHide>
+			<OnEvent>WindActionLeft_OnEvent(self, event, ...);</OnEvent>
+		</Scripts>
+	</Frame>
+</Ui>

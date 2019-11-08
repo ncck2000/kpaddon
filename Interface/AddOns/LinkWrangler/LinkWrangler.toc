@@ -1,0 +1,15 @@
+﻿## Interface: 11302
+## Title: LinkWrangler
+## Notes: Open multiple item tooltip windows from links in chat
+## Title-zhCN: |cff7fff7f[物品链接]|rLinkWrangler
+## Notes-zhCN: 允许同时打开多个物品链接查看,并提供特殊功能.
+## Title-zhTW: |cff7fff7f[物品鏈結]|rLinkWrangler
+## Notes-zhTW: 允許同時打開多個物品鏈結查看,並提供特殊功能.
+
+## Version: 2.02
+## X-Release: Release
+## SavedVariables: LinkWranglerSaved
+## Author: brykrys
+## X-Date: 29 September 2019
+## X-Category: MYADDONS_CATEGORY_INVENTORY
+LinkWrangler.xml

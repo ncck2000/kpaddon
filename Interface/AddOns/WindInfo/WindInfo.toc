@@ -1,0 +1,12 @@
+## Interface: 11302
+## Title: |CFFFFFF9A[직업공통] |CFFFFFFFFWind Info |CFF6699CCXE
+## Author: [Created] Jae-young Lee(Wind), [Modified] Mars(헬스크림), Hexa(불타는 군단)
+## Version: 2.3.0.04
+## Notes: Wind Info Frame
+## Dependencies: WindCommon
+## SavedVariablesPerCharacter: WindInfoBodyConfig, WindInfoXPConfig, WindInfoRPConfig, WindInfoBagConfig, WindInfoMoneyConfig, WindInfoPerfConfig, WindInfoTimeConfig, WindInfoDateConfig, WindInfoDuraConfig, WindInfoTickConfig
+WindInfoDefault.lua
+WindInfo.xml
+
+WindInfoFixCommand.lua
+WindInfoFixMouseWheel.lua

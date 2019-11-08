@@ -1,0 +1,27 @@
+## Interface: 11302
+## Title: |CFFFFFF9A[직업공통] |CFFFFFFFFWind Action |CFF6699CCXE
+## Author: [Created] Jae-young Lee(Wind), [Modified] Mars(헬스크림), Hexa(불타는 군단)
+## Version: 2.3.0.01
+## Notes: Remake Menu Micro Button, Action Button, and Bag Slot
+## Dependencies: WindCommon
+## SavedVariablesPerCharacter: WindActionBodyConfig, WindActionBagConfig, WindActionBottomLeftConfig, WindActionBottomRightConfig, WindActionLatencyConfig, WindActionLeftConfig, WindActionMainConfig, WindActionMenuConfig, WindActionPetConfig, WindActionRightConfig, WindActionScrollConfig, WindActionShiftConfig, WindActionVehicleLeaveConfig, WindActionCastingBarConfig
+
+WindActionDefault.lua
+WindAction.xml
+WindActionMain.xml
+WindActionBottomLeft.xml
+WindActionBottomRight.xml
+WindActionRight.xml
+WindActionLeft.xml
+WindActionShift.xml
+WindActionPet.xml
+WindActionMenu.xml
+WindActionBag.xml
+WindActionScroll.xml
+WindActionVehicleLeave.xml
+WindActionCastingBar.xml
+
+## WindActionFixSpellDropList.lua
+WindActionFixMainAlwaysGrid.lua
+WindActionFixMouseWheel.lua
+WindActionFixCommand.lua

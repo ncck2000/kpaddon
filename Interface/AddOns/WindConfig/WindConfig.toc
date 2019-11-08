@@ -1,0 +1,19 @@
+## Interface: 11302
+## Title: |CFFFFFF9A[직업공통] |CFFFFFFFFWind Config |CFF6699CCXE
+## Author: [Created] Jae-young Lee(Wind), [Modified] Mars(헬스크림), Hexa(불타는 군단)
+## Version: 2.2.0.02
+## Notes: Wind Config Frame
+## DefaultState: Disabled
+## RequiredDeps: WindCommon
+## OptionalDeps: WindAction, WindBB, WindCasting, WindChat, WindInfo, WindMinimap, WindItem, WindZone
+## SavedVariables: WindActionUserData1, WindInfoUserData1, WindBBUserData1
+
+WindConfig.xml
+WindActionConfig.xml
+WindBBConfig.xml
+## WindCastingConfig.xml
+## WindChatConfig.xml
+WindInfoConfig.xml
+## WindMinimapConfig.xml
+
+WindConfigFixCommand.lua

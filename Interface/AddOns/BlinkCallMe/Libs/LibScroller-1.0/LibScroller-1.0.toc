@@ -1,0 +1,12 @@
+## Interface: 70400
+## LoadOnDemand:
+## Title: LibScroller-1.0
+## Notes: Scroll Scroll and Scroll
+## OptionalDeps: Ace3
+## SavedVariables: LibScrollerDB
+## X-Category: Library
+## OptionalDeps: LibStub
+## X-License: LGPL v2.1
+
+LibStub\LibStub.lua
+lib.xml

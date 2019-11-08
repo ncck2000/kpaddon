@@ -1,0 +1,1818 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<Script file="WindActionConfig.lua"/>
+
+	<Frame name="WindActionConfigTmp" inherits="WindLocation" hidden="true" virtual="true">
+		<Frames>
+			<Frame name="$parentCOLORText">
+				<Size>
+					<AbsDimension x="30" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentYText" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="색상" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentVIEWBR" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentCOLORText" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigVIEWBR_OnClick(self);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentVIEWBRText">
+				<Size>
+					<AbsDimension x="140" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentVIEWBR" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="배경 표시" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="$parentLineText">
+				<Size>
+					<AbsDimension x="30" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentVIEWBR" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="형태" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindActionConfigViewTmp" inherits="WindLocationView" hidden="true" virtual="true">
+		<Frames>
+			<Frame name="$parentCOLORText">
+				<Size>
+					<AbsDimension x="30" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentYText" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="색상" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentVIEWBR" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentCOLORText" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigVIEWBR_OnClick(self);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentVIEWBRText">
+				<Size>
+					<AbsDimension x="140" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentVIEWBR" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="배경 표시" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="$parentLineText">
+				<Size>
+					<AbsDimension x="30" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentVIEWBR" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="형태" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindActionConfigPSTmp" inherits="WindActionConfigTmp" hidden="true" virtual="true">
+		<Frames>
+			<CheckButton name="$parentLine1" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLineText" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 1);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine1Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine1" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="10x1" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine2" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine1Text" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 2);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine2Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine2" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="5x2" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine3" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine1" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="4" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 3);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine3Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine3" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="2x5" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine4" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine3Text" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 4);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine4Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine4" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="1x10" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindActionConfigViewPSTmp" inherits="WindActionConfigViewTmp" hidden="true" virtual="true">
+		<Frames>
+			<CheckButton name="$parentLine1" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLineText" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 1);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine1Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine1" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="10x1" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine2" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine1Text" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 2);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine2Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine2" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="5x2" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine3" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine1" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="4" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 3);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine3Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine3" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="2x5" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine4" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine3Text" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 4);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine4Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine4" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="1x10" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindActionConfigMainTmp" inherits="WindActionConfigTmp" hidden="true" virtual="true">
+		<Frames>
+			<CheckButton name="$parentLine1" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLineText" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 1);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine1Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine1" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="12x1" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine2" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine1Text" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 2);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine2Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine2" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="6x2" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine3" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine1" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="4" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 3);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine3Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine3" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="4x3" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine4" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine3Text" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 4);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine4Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine4" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="3x4" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine5" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine3" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="4" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 5);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine5Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine5" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="2x6" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine6" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine5Text" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 6);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine6Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine6" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="1x12" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindActionConfigViewMainTmp" inherits="WindActionConfigViewTmp" hidden="true" virtual="true">
+		<Frames>
+			<CheckButton name="$parentVIEWTOOLTIP" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentVIEWBRText" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-80" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigVIEWTOOLTIP_OnClick(self);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentVIEWTOOLTIPText">
+				<Size>
+					<AbsDimension x="140" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentVIEWTOOLTIP" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="툴팁 표시" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine1" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLineText" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 1);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine1Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine1" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="12x1" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine2" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine1Text" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 2);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine2Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine2" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="6x2" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine3" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine1" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="4" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 3);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine3Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine3" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="4x3" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine4" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine3Text" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 4);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine4Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine4" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="3x4" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine5" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine3" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="4" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 5);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine5Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine5" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="2x6" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine6" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine5Text" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 6);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentLine6Text">
+				<Size>
+					<AbsDimension x="40" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLine6" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="1x12" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentLine7" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLine5" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="4" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindActionConfigLine_OnClick(self, 7);</OnClick>
+				</Scripts>
+			</CheckButton>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindActionConfig" inherits="WindBorder" parent="UIParent" movable="true">
+		<Size>
+			<AbsDimension x="680" y="640" />
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativeTo="WindConfig" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension x="0" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+
+		<Frames>
+			<Frame name="WindActionConfigMain" inherits="WindActionConfigMainTmp" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-25"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="기본" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionMainConfig[7][1], true, "WindActionConfigMainCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionMainConfig[7][2], true, "WindActionConfigMainCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigMain_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>					
+			</Frame>
+
+			<Frame name="WindActionConfigBottomLeft" inherits="WindActionConfigMainTmp" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-180"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="좌측하단" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionBottomLeftConfig[7][1], true, "WindActionConfigBottomLeftCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionBottomLeftConfig[7][2], true, "WindActionConfigBottomLeftCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigBottomLeft_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>					
+			</Frame>
+
+			<Frame name="WindActionConfigBottomRight" inherits="WindActionConfigMainTmp" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-335"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="우측하단" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionBottomRightConfig[7][1], true, "WindActionConfigBottomRightCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionBottomRightConfig[7][2], true, "WindActionConfigBottomRightCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigBottomRight_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>					
+			</Frame>
+
+			<Frame name="WindActionConfigVehicleLeave" inherits="WindLocation" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-490"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="내리기" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>				
+			</Frame>
+			
+			<Frame name="WindActionConfigMenu" inherits="WindActionConfigViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="60" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="255" y="-25"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="메뉴" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<CheckButton name="$parentLine1" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentLineText" relativePoint="TOPRIGHT">
+								<Offset>
+									<AbsDimension x="-5" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindActionConfigLine_OnClick(self, 1);</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentLine1Text">
+						<Size>
+							<AbsDimension x="40" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentLine1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="2" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="8x1" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<CheckButton name="$parentLine2" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentLine1Text" relativePoint="TOPRIGHT">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindActionConfigLine_OnClick(self, 2);</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentLine2Text">
+						<Size>
+							<AbsDimension x="40" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentLine2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="2" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="4x2" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<CheckButton name="$parentLine3" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentLine1" relativePoint="BOTTOMLEFT">
+								<Offset>
+									<AbsDimension x="0" y="4" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindActionConfigLine_OnClick(self, 3);</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentLine3Text">
+						<Size>
+							<AbsDimension x="40" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentLine3" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="2" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="2x4" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<CheckButton name="$parentLine4" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentLine3Text" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindActionConfigLine_OnClick(self, 4);</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentLine4Text">
+						<Size>
+							<AbsDimension x="40" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentLine4" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="2" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="1x8" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionMenuConfig[7][1], true, "WindActionConfigMenuCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionMenuConfig[7][2], true, "WindActionConfigMenuCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigMenu_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>
+			</Frame>
+
+			<Frame name="WindActionConfigRight" inherits="WindActionConfigMainTmp" hidden="false">
+				<Size>
+					<AbsDimension x="60" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="255" y="-180"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="첫번째우측" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionRightConfig[7][1], true, "WindActionConfigRightCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionRightConfig[7][2], true, "WindActionConfigRightCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigRight_resetColor()
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>					
+			</Frame>
+
+			<Frame name="WindActionConfigLeft" inherits="WindActionConfigMainTmp" hidden="false">
+				<Size>
+					<AbsDimension x="60" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="255" y="-335"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="두번째우측" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionLeftConfig[7][1], true, "WindActionConfigLeftCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionLeftConfig[7][2], true, "WindActionConfigLeftCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigLeft_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>					
+			</Frame>
+
+			<Frame name="WindActionConfigScroll" inherits="WindActionConfigViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="60" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="255" y="-490"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="스크롤" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<CheckButton name="$parentLine1" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentLineText" relativePoint="TOPRIGHT">
+								<Offset>
+									<AbsDimension x="-5" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindActionConfigLine_OnClick(self, 1);</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentLine1Text">
+						<Size>
+							<AbsDimension x="40" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentLine1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="2" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="1x2" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<CheckButton name="$parentLine2" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentLine1Text" relativePoint="TOPRIGHT">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindActionConfigLine_OnClick(self, 2);</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentLine2Text">
+						<Size>
+							<AbsDimension x="40" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentLine2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="2" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="2x1" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionScrollConfig[7][1], true, "WindActionConfigScrollCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionScrollConfig[7][2], true, "WindActionConfigScrollCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigScroll_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>
+			</Frame>
+
+			<Frame name="WindActionConfigBag" inherits="WindActionConfigViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="30" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="490" y="-25"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="가방" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<CheckButton name="$parentLine1" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentLineText" relativePoint="TOPRIGHT">
+								<Offset>
+									<AbsDimension x="-5" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindActionConfigLine_OnClick(self, 1);</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentLine1Text">
+						<Size>
+							<AbsDimension x="40" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentLine1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="2" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="6x1" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<CheckButton name="$parentLine2" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentLine1Text" relativePoint="TOPRIGHT">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindActionConfigLine_OnClick(self, 2);</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentLine2Text">
+						<Size>
+							<AbsDimension x="40" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentLine2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="2" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="1x6" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionBagConfig[7][1], true, "WindActionConfigBagCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionBagConfig[7][2], true, "WindActionConfigBagCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigBag_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>
+			</Frame>
+
+			<Frame name="WindActionConfigPet" inherits="WindActionConfigPSTmp" hidden="false">
+				<Size>
+					<AbsDimension x="30" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="490" y="-180"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="펫" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionPetConfig[7][1], true, "WindActionConfigPetCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionPetConfig[7][2], true, "WindActionConfigPetCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigPet_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>	
+			</Frame>
+
+			<Frame name="WindActionConfigShift" inherits="WindActionConfigViewPSTmp" hidden="false">
+				<Size>
+					<AbsDimension x="30" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="490" y="-335"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="태세" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionShiftConfig[7][1], true, "WindActionConfigShiftCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindActionShiftConfig[7][2], true, "WindActionConfigShiftCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindActionConfigShift_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>					
+			</Frame>
+
+			<Frame name="WindActionConfigCastingBar" inherits="WindLocation" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="470" y="-490"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="시전바" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>				
+			</Frame>
+			
+		</Frames>
+		<Scripts>
+			<OnShow>WindActionConfig_OnShow();</OnShow>
+			<OnMouseDown>if arg1 == "LeftButton" then WindActionConfig:StartMoving(); end</OnMouseDown>
+			<OnMouseUp>if arg1 == "LeftButton" then WindActionConfig:StopMovingOrSizing(); end</OnMouseUp>
+		</Scripts>
+	</Frame>
+
+</Ui>

@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: |CFFFFFF9A[직업공통] |CFFFFFFFFWind Common |CFF6699CCXE
+## Author: Jae-young Lee (Wind)
+## Version: 2.2.0.02
+## Notes: Wind Common API
+WindCommon.xml
+
+WindCommonFixCommand.lua

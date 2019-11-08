@@ -1,0 +1,170 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<Script file="WindBBConfig.lua"/>
+
+	<Frame name="WindBBConfig" inherits="WindBorder" parent="UIParent">
+		<Size>
+			<AbsDimension x="234" y="120" />
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativeTo="WindConfig" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension x="0" y="0" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Frames>
+
+			<Frame name="WindBBConfigBody" inherits="WindPoint" hidden="false">
+				<Size>
+					<AbsDimension x="80" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-10" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="가방 및 은행" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Frame name="$parent1COLORText">
+						<Size>
+							<AbsDimension x="56" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentYText" relativePoint="BOTTOMLEFT">
+								<Offset>
+									<AbsDimension x="-26" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="가방 색상" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<Button name="$parent1COLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parent1COLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindBBConfigAll[4][1][1], true, "WindBBConfigBody1COLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parent1COLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parent1COLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindBBConfigAll[4][1][2], true, "WindBBConfigBody1COLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Frame name="$parent3COLORText">
+						<Size>
+							<AbsDimension x="56" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parent1COLORText" relativePoint="BOTTOMLEFT">
+								<Offset>
+									<AbsDimension x="0" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="은행 색상" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<Button name="$parent3COLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parent3COLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindBBConfigAll[4][3][1], true, "WindBBConfigBody3COLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parent3COLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parent3COLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindBBConfigAll[4][3][2], true, "WindBBConfigBody3COLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parent1COLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parent1COLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindBBConfigBody_resetColor(1);
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parent3COLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parent3COLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindBBConfigBody_resetColor(3);
+							</OnClick>
+						</Scripts>
+					</Button>
+
+				</Frames>
+			</Frame>
+
+		</Frames>
+		<Scripts>
+			<OnShow>WindBBConfig_OnShow();</OnShow>
+		</Scripts>
+	</Frame>
+
+</Ui>

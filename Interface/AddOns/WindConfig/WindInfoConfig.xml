@@ -1,0 +1,521 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<Script file="WindInfoConfig.lua"/>
+
+	<Frame name="WindInfoConfigSizeViewTmp" inherits="WindLocationSizeView" hidden="true" virtual="true">
+		<Frames>
+			<CheckButton name="$parentMOUSE" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSIZEText" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindInfoConfigMOUSE_OnClick(self);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentMOUSEText">
+				<Size>
+					<AbsDimension x="140" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentMOUSE" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="마우스오버 숨김/표시" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindInfoConfigSizeViewTooltipTmp" inherits="WindLocationSizeView" hidden="true" virtual="true">
+		<Frames>
+			<CheckButton name="$parentMOUSE" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSIZEText" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindInfoConfigMOUSE_OnClick(self);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentMOUSEText">
+				<Size>
+					<AbsDimension x="140" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentMOUSE" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="마우스오버 숨김/표시" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentTEXT" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentMOUSE" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindInfoConfigTEXT_OnClick(self);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentTEXTText">
+				<Size>
+					<AbsDimension x="140" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTEXT" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="상세 표시" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<CheckButton name="$parentTOOLTIP" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTEXTText" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="-85" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindInfoConfigTOOLTIP_OnClick(self);</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Frame name="$parentTOOLTIPText">
+				<Size>
+					<AbsDimension x="140" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTOOLTIP" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="툴팁 표시" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindInfoConfig" inherits="WindBorder" parent="UIParent">
+		<Size>
+			<AbsDimension x="465" y="710" />
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativeTo="WindConfig" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension x="0" y="0" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Frames>
+
+			<Frame name="WindInfoConfigBody" inherits="WindLocationSize" hidden="false">
+				<Size>
+					<AbsDimension x="60" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-10" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="전체" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Frame name="$parentCOLORText">
+						<Size>
+							<AbsDimension x="30" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentSIZEText" relativePoint="BOTTOMLEFT">
+								<Offset>
+									<AbsDimension x="0" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="색상" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<Button name="$parentCOLOR1" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLORText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="-1" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindInfoBodyConfig[8][1], true, "WindInfoConfigBodyCOLOR1");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLOR2" inherits="WindColorButton" hidden="false">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR1" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="6" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindConfig_OpenColorPicker(WindInfoBodyConfig[8][2], true, "WindInfoConfigBodyCOLOR2");
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentCOLORRESET" inherits="OptionsButtonTemplate" text="초기화" hidden="false">
+						<Size>
+							<AbsDimension x="60" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentCOLOR2" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="15" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								WindInfoConfigBody_resetColor();
+							</OnClick>
+						</Scripts>
+					</Button>
+					<CheckButton name="$parentVIEWBR" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentCOLORText" relativePoint="BOTTOMLEFT">
+								<Offset>
+									<AbsDimension x="0" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindInfoConfigBodyVIEWBR_OnClick(self:GetChecked());</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentVIEWBRText">
+						<Size>
+							<AbsDimension x="140" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentVIEWBR" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="5" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="배경 표시" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<CheckButton name="$parentMOUSEOVER" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentVIEWBRText" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="-85" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindInfoConfigBodyMOUSEOVER_OnClick(self:GetChecked());</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentMOUSEOVERText">
+						<Size>
+							<AbsDimension x="140" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentMOUSEOVER" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="5" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="이벤트" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<CheckButton name="$parentSTBAR" inherits="WindCheckButton" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentVIEWBR" relativePoint="BOTTOMLEFT">
+								<Offset>
+									<AbsDimension x="0" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>WindInfoConfigBodySTBAR_OnClick(self:GetChecked());</OnClick>
+						</Scripts>
+					</CheckButton>
+					<Frame name="$parentSTBARText">
+						<Size>
+							<AbsDimension x="140" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentSTBAR" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="5" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer>
+								<FontString inherits="WindFontString" text="경험치바/평판바 표시" justifyH="LEFT" hidden="false"/>
+							</Layer>
+						</Layers>
+					</Frame>
+				</Frames>
+			</Frame>
+
+			<Frame name="WindInfoConfigXP" inherits="WindInfoConfigSizeViewTooltipTmp" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-155" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="경험치" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="WindInfoConfigDate" inherits="WindInfoConfigSizeViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-280" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="날짜" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="WindInfoConfigMoney" inherits="WindInfoConfigSizeViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-385" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="재산" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="WindInfoConfigDura" inherits="WindInfoConfigSizeViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-490" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="내구도" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="WindInfoConfigTime" inherits="WindInfoConfigSizeViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="250" y="-50" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="시간" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="WindInfoConfigRP" inherits="WindInfoConfigSizeViewTooltipTmp" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="250" y="-155" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="평판" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="WindInfoConfigPerf" inherits="WindInfoConfigSizeViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="250" y="-280" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="성능" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="WindInfoConfigBag" inherits="WindInfoConfigSizeViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="250" y="-385" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="가방" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="WindInfoConfigTick" inherits="WindInfoConfigSizeViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="50" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="250" y="-490" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="HP/MP" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+
+
+			<Frame name="WindInfoConfigToken" inherits="WindInfoConfigSizeViewTmp" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-595" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="토큰" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+
+		</Frames>
+		<Scripts>
+			<OnShow>WindInfoConfig_OnShow();</OnShow>
+		</Scripts>
+	</Frame>
+
+</Ui>

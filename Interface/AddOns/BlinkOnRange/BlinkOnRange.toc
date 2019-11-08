@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: |cffffff9a블링크|r 거리체크
+## Notes: 지정한 스킬이 사용가능한 거리인지 알려줍니다.
+## SavedVariables: 
+## SavedVariablesPerCharacter: BOR_Config
+## OptionalDeps: Blink
+BlinkOnRange_Spells.lua
+BlinkOnRange.lua

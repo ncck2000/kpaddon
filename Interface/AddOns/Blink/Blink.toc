@@ -1,0 +1,7 @@
+## Interface: 11302
+## Title: |cffffff9a블링크|r 설정창
+## Notes: |cffffff9aBlink|r Configure
+## Dependencies:
+## OptionalDeps: 
+## SavedVariables: 
+blink.lua

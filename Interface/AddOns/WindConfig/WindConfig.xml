@@ -1,0 +1,711 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<Script file="WindConfig.lua"/>
+
+	<EditBox name="WindEditBox" autoFocus="false" enableMouse="true" hidden="true" virtual="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentLeft" file="Interface\Common\Common-Input-Border">
+					<Size>
+						<AbsDimension x="8" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT">
+							<Offset>
+								<AbsDimension x="-5" y="0" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0" right="0.0625" top="0" bottom="0.625" />
+				</Texture>
+				<Texture name="$parentRight" file="Interface\Common\Common-Input-Border">
+					<Size>
+						<AbsDimension x="8" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset>
+								<AbsDimension x="5" y="0" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.9375" right="1" top="0" bottom="0.625" />
+				</Texture>
+				<Texture name="$parentMiddle" file="Interface\Common\Common-Input-Border">
+					<Size>
+						<AbsDimension x="10" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT" />
+						<Anchor point="RIGHT" relativeTo="$parentRight" relativePoint="LEFT" />
+					</Anchors>
+					<TexCoords left="0.0625" right="0.9375" top="0" bottom="0.625" />
+				</Texture>
+			</Layer>
+		</Layers>
+		<FontString font="Fonts\2002.ttf" spacing="3">
+			<FontHeight>
+				<AbsValue val="12" />
+			</FontHeight>
+			<Color r="1" g="1" b="1" />
+			<Shadow>
+				<Color r="0" g="0" b="0" />
+				<Offset>
+					<AbsDimension x="1" y="-1" />
+				</Offset>
+			</Shadow>
+		</FontString>
+	</EditBox>
+
+	<Frame name="WindPoint" hidden="true" virtual="true">
+		<Frames>
+			<Frame name="$parentScaleText">
+				<Size>
+					<AbsDimension x="30" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parent" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="배율" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<EditBox name="$parentSCALE" inherits="WindEditBox" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentScaleText" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnterPressed>WindConfig_changeScale(self, true);</OnEnterPressed>
+					<OnTabPressed>WindConfig_changeScale(self, true);</OnTabPressed>
+					<OnEscapePressed>WindConfig_changeScale(self, false);</OnEscapePressed>
+				</Scripts>
+			</EditBox>
+			<Frame name="$parentXText">
+				<Size>
+					<AbsDimension x="30" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentScaleText" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString name="WindConfigMinimapXLabel" inherits="WindFontString" text="가로" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<EditBox name="$parentX" inherits="WindEditBox" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentXText" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnterPressed>WindConfig_changeX(self, true);</OnEnterPressed>
+					<OnTabPressed>WindConfig_changeX(self, true);</OnTabPressed>
+					<OnEscapePressed>WindConfig_changeX(self, false);</OnEscapePressed>
+				</Scripts>
+			</EditBox>
+			<Frame name="$parentYText">
+				<Size>
+					<AbsDimension x="30" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentXText" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString name="WindConfigMinimapXLabel" inherits="WindFontString" text="세로" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<EditBox name="$parentY" inherits="WindEditBox" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentYText" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnterPressed>WindConfig_changeY(self);</OnEnterPressed>
+					<OnTabPressed>WindConfig_changeY(self);</OnTabPressed>
+					<OnEscapePressed>WindConfig_changeY(self);</OnEscapePressed>
+				</Scripts>
+			</EditBox>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindLocation" inherits="WindPoint" hidden="true" virtual="true">
+		<Frames>
+			<Frame name="$parentPoint" inherits="WindBorder" hidden="false">
+				<Size>
+					<AbsDimension x="70" y="64" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentX" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="8" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<CheckButton name="$parentTOPLEFT" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentPoint" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="5" y="-4" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changePoint(self, "TOPLEFT");</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentTOP" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTOPLEFT" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changePoint(self, "TOP");</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentTOPRIGHT" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTOP" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changePoint(self, "TOPRIGHT");</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentLEFT" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentTOPLEFT" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="2" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changePoint(self, "LEFT");</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentCENTER" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentLEFT" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changePoint(self, "CENTER");</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentRIGHT" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentCENTER" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changePoint(self, "RIGHT");</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentBOTTOMLEFT" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLEFT" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="2" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changePoint(self, "BOTTOMLEFT");</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentBOTTOM" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBOTTOMLEFT" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changePoint(self, "BOTTOM");</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentBOTTOMRIGHT" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBOTTOM" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changePoint(self, "BOTTOMRIGHT");</OnClick>
+				</Scripts>
+			</CheckButton>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindLocationSize" inherits="WindLocation" hidden="true" virtual="true">
+		<Frames>
+			<Frame name="$parentSIZEText">
+				<Size>
+					<AbsDimension x="30" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentYText" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="크기" justifyH="LEFT" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<EditBox name="$parentWIDTH" inherits="WindEditBox" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentSIZEText" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnterPressed>WindConfig_changeWidth(self, true);</OnEnterPressed>
+					<OnTabPressed>WindConfig_changeWidth(self, true);</OnTabPressed>
+					<OnEscapePressed>WindConfig_changeWidth(self, false);</OnEscapePressed>
+				</Scripts>
+			</EditBox>
+			<Frame name="$parentSIZEXText">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentWIDTH" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="x" justifyH="CENTER" hidden="false"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<EditBox name="$parentHEIGHT" inherits="WindEditBox" hidden="false">
+				<Size>
+					<AbsDimension x="40" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentSIZEXText" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnterPressed>WindConfig_changeHeight(self);</OnEnterPressed>
+					<OnTabPressed>WindConfig_changeHeight(self);</OnTabPressed>
+					<OnEscapePressed>WindConfig_changeHeight(self);</OnEscapePressed>
+				</Scripts>
+			</EditBox>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindLocationSizeView" inherits="WindLocationSize" hidden="true" virtual="true">
+		<Frames>
+			<CheckButton name="$parentVIEW" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changeView(self, btn, down);</OnClick>
+				</Scripts>
+			</CheckButton>
+		</Frames>
+	</Frame>
+
+	<Frame name="WindLocationView" inherits="WindLocation" hidden="true" virtual="true">
+		<Frames>
+			<CheckButton name="$parentVIEW" inherits="WindCheckButton" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>WindConfig_changeView(self, btn, down);</OnClick>
+				</Scripts>
+			</CheckButton>
+		</Frames>
+	</Frame>
+
+	<Button name="WindColorButton" hidden="true" virtual="true">
+		<Size>
+			<AbsDimension x="16" y="16"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parent_SwatchBg">
+					<Size>
+						<AbsDimension x="14" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="1.0" b="1.0"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnEnter>
+				getglobal(self:GetName().."_SwatchBg"):SetVertexColor(NORMAL_FONT_COLOR.r, NORMAL_FONT_COLOR.g, NORMAL_FONT_COLOR.b);
+			</OnEnter>
+			<OnLeave>
+				getglobal(self:GetName().."_SwatchBg"):SetVertexColor(HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b);
+			</OnLeave>
+		</Scripts>
+		<NormalTexture name="$parentNormalTexture" file="Interface\ChatFrame\ChatFrameColorSwatch"/>
+	</Button>
+
+	<Frame name="WindConfig" inherits="WindBorder" parent="UIParent" hidden="false">
+		<Size>
+			<AbsDimension x="120" y="200" />
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="150" y="-120" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Frames>
+			<Button name="WindActionConfigButton" inherits="WindButton" text="Action" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-10" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="WindAction" justifyH="CENTER" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+						WindConfig_closeAll();
+						if (WindActionMain) then 
+							WindActionConfig:Show();
+							WindActionConfig_PositionReset(); 
+							WindCommon_Print("WindAction 설정창을 열었습니다.");
+						end	
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="WindInfoConfigButton" inherits="WindButton" text="Info" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-30" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="WindInfo" justifyH="CENTER" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+						WindConfig_closeAll();
+						if (WindInfo) then 
+							WindInfoConfig:Show(); 
+							WindCommon_Print("WindInfo 설정창을 열었습니다.");
+						end
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="WindBBConfigButton" inherits="WindButton" text="Info" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-50" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="WindBB" justifyH="CENTER" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+						WindConfig_closeAll();
+						if (WindBag1) then 
+							WindBBConfig:Show(); 
+							WindCommon_Print("WindBB 설정창을 열었습니다.");
+						end
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="WindConfigHide" inherits="WindButton" text="Info" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-70" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="Popup Hide" justifyH="CENTER" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+						WindConfig_closeAll();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="WindConfigReset" inherits="WindButton" text="Info" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-90" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="초기화" justifyH="CENTER" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+						WindConfig_resetAll();
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="WindConfigSave" inherits="WindButton" text="Save" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-120" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="Save" justifyH="CENTER" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
+						GameTooltip:AddLine("UserData Save");
+						GameTooltip:Show();
+						self:SetBackdropColor(1,0,0);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+						self:SetBackdropColor(1,1,1);
+					</OnLeave>
+					<OnClick>
+						if WindConfig then
+							WindUserData_Save();
+						end
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="WindConfigLoad" inherits="WindButton" text="Load" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-140" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="Load" justifyH="CENTER" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
+						GameTooltip:AddLine("UserData Load");
+						GameTooltip:Show();
+						self:SetBackdropColor(1,0,0);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+						self:SetBackdropColor(1,1,1);
+					</OnLeave>
+					<OnClick>
+						if WindConfig then
+							WindUserData_Load();
+						end
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="WindConfigHide" inherits="WindButton" text="Hide" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-170" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString inherits="WindFontString" text="Hide" justifyH="CENTER" hidden="false"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
+						GameTooltip:AddLine("/windconfig");
+						GameTooltip:Show();
+						self:SetBackdropColor(1,0,0);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+						self:SetBackdropColor(1,1,1);
+					</OnLeave>
+					<OnClick>
+						if WindConfig then
+							if WindConfig:IsShown() then
+								WindConfig:Hide();
+							else
+								WindConfig:Show();
+							end
+						end
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+	</Frame>
+
+</Ui>

@@ -1,0 +1,10 @@
+## Interface: 11302
+## Version: 12.10.30
+## Title: Examiner-Button
+## Author: silverfairy
+## Notes: Added Button for Examiner
+## Notes-koKR: Examiner에 살펴보기 버튼을 추가합니다.
+## SavedVariables: ExaminerButton_Config
+## Dependencies: Examiner
+
+ExaminerButton.xml

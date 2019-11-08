@@ -1,0 +1,169 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<Script file="WindInfoMoney.lua"/>
+	<Script file="WindInfoTime.lua"/>
+	<Script file="WindInfoPerf.lua"/>
+	<Script file="WindInfoBag.lua"/>
+	<Script file="WindInfoDate.lua"/>
+	<Script file="WindInfoDura.lua"/>
+	<Script file="WindInfoTick.lua"/>
+	<Script file="WindInfo.lua"/>
+	<Frame name="WindInfo" frameStrata="BACKGROUND" enableMouse="true" parent="UIParent" hidden="false">
+		<Frames>
+			<Frame name="WindInfoBorder" inherits="WindColorBorder"/>
+			<Frame name="WindInfoMoney">
+				<Frames>
+					<Frame name="WindInfoMoneySmall" inherits="SmallMoneyFrameTemplate"/>
+				</Frames>
+				<Scripts>
+					<OnLoad>WindInfoMoney_OnLoad(self); </OnLoad>
+					<OnEvent>WindInfoMoney_OnEvent(self, event, ...); </OnEvent>
+					<OnShow>WindInfoMoney_OnShow(self); </OnShow>
+				</Scripts>
+			</Frame>
+			<Frame name="WindInfoTime">
+				<Layers>
+					<Layer>
+						<FontString name="WindInfoTimeText" inherits="GameFontNormal" wraponspaces="true" justifyH="CENTER"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>WindInfoTime_OnLoad(self); </OnLoad>
+					<OnEvent>WindInfoTime_OnEvent(self, event, ...); </OnEvent>
+					<OnUpdate>WindInfoTime_OnUpdate(self, elapsed); </OnUpdate>
+				</Scripts>
+			</Frame>
+			<Frame name="WindInfoDate">
+				<Layers>
+					<Layer>
+						<FontString name="WindInfoDateText" inherits="GameFontNormal" wraponspaces="true" justifyH="CENTER"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>WindInfoDate_OnLoad(self); </OnLoad>
+					<OnEvent>WindInfoDate_OnEvent(self, event, ...); </OnEvent>
+					<OnUpdate>WindInfoDate_OnUpdate(self, elapsed); </OnUpdate>
+				</Scripts>
+			</Frame>
+			<Frame name="WindInfoPerf">
+				<Layers>
+					<Layer>
+						<FontString name="WindInfoPerfText" inherits="GameFontNormal" wraponspaces="true" justifyH="CENTER"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>WindInfoPerf_OnLoad(self); </OnLoad>
+					<OnEvent>WindInfoPerf_OnEvent(self, event, ...); </OnEvent>
+					<OnUpdate>WindInfoPerf_OnUpdate(self, elapsed); </OnUpdate>
+				</Scripts>
+			</Frame>
+			<Frame name="WindInfoBag">
+				<Layers>
+					<Layer>
+						<FontString name="WindInfoBagText" inherits="GameFontNormal" wraponspaces="true" justifyH="RIGHT"/>
+						<Texture name="WindInfoBagIcon" file="Interface\AddOns\WindInfo\images\bag.tga" hidden="false">
+							<Size>
+								<AbsDimension x="14" y="14"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="WindInfoBag" relativePoint="RIGHT">
+									<Offset>
+										<AbsDimension x="2" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>WindInfoBag_OnLoad(self); </OnLoad>
+					<OnEvent>WindInfoBag_OnEvent(self, event, ...); </OnEvent>
+				</Scripts>
+			</Frame>
+			<Frame name="WindInfoDura">
+				<Layers>
+					<Layer>
+						<FontString name="$parentText" inherits="GameFontNormal" wraponspaces="true" justifyH="RIGHT"/>
+						<Texture name="$parentIcon" file="Interface\Icons\Trade_Blacksmithing" hidden="false">
+							<Size>
+								<AbsDimension x="12" y="12"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="WindInfoDura" relativePoint="RIGHT">
+									<Offset>
+										<AbsDimension x="4" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.1" right="0.9" top="0.1" bottom="0.9"/>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad> WindInfoDura_OnLoad(self); </OnLoad>
+					<OnEvent> WindInfoDura_OnEvent(self, event, ...); </OnEvent>
+					<OnUpdate> WindInfoDura_OnUpdate(self, elapsed); </OnUpdate>
+				</Scripts>
+			</Frame>
+			<Frame name="WindInfoTick">
+				<Layers>
+					<Layer>
+						<FontString name="WindInfoTicksHealthText" inherits="GameFontNormal" wraponspaces="true" justifyH="RIGHT"/>
+						<FontString name="WindInfoTicksManaText" inherits="GameFontNormal" wraponspaces="true" justifyH="RIGHT">
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="WindInfoTicksHealthText" relativePoint="RIGHT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad> WindInfoTick_OnLoad(self); </OnLoad>
+					<OnEvent> WindInfoTick_OnEvent(self, event, ...); </OnEvent>
+					<OnUpdate> WindInfoTick_Fade(elapsed);	</OnUpdate>
+				</Scripts>
+			</Frame>
+			<Frame name="WindInfoXP">
+				<Layers>
+					<Layer>
+						<FontString name="WindInfoXPText" inherits="GameFontNormal" wraponspaces="true" justifyH="LEFT"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<StatusBar name="WindInfoXPBar">
+				<BarTexture file="Interface\AddOns\WindCommon\UI-StatusBar.tga"/>
+			</StatusBar>
+			<StatusBar name="WindInfoRestXP">
+				<BarTexture file="Interface\AddOns\WindCommon\UI-StatusBar.tga"/>
+				<BarColor r="0.4" g="0" b="0.6"/>
+			</StatusBar>
+			<Frame name="WindInfoRP">
+				<Layers>
+					<Layer>
+						<FontString name="WindInfoRPText" inherits="GameFontNormal" wraponspaces="true" justifyH="RIGHT"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<StatusBar name="WindInfoRPBar">
+				<BarTexture file="Interface\AddOns\WindCommon\UI-StatusBar.tga"/>
+			</StatusBar>
+
+			<Frame name="WindInfoMouse">
+				<Scripts>
+					<OnEnter> WindInfoMouse_OnEnter(self, motion); </OnEnter>
+					<OnLeave> WindInfoMouse_OnLeave(self, motion);
+					GameTooltip:Hide(); </OnLeave>
+				</Scripts>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>WindInfo_OnLoad(self); </OnLoad>
+			<OnEvent>WindInfo_OnEvent(self, event, ...); </OnEvent>
+		</Scripts>
+	</Frame>
+	<GameTooltip name="WIDCHKTT" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="GameTooltipTemplate"/>
+</Ui>

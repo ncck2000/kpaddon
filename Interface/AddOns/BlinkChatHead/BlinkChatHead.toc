@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: |cffffff9a블링크|r 말머리
+## Notes: 각종 대화창에 자신만의 고유한 말머리를 달 수 있습니다.
+## SavedVariablesPerCharacter: BCH_DATA,BCH_VERSION_INFO
+## OptionalDeps: BlinkMod, Blink
+## Author: 블링크
+localization.lua
+BlinkChatHead.lua
